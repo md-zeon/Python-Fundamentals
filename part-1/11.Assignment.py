@@ -14,6 +14,13 @@ print("Hello", name + ",", "you are", age, "years old!")
 Q2. Take two numbers as input from the user and print their sum, difference, 
 product, and quotient. 
 '''
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+print("Sum:", num1 + num2)
+print("Difference:", num1 - num2)
+print("Product:", num1 * num2)
+print("Quotient:", num1 / num2)
 
 '''
 Q3. Ask the user to enter two integers and one float. Convert them all to floats 
