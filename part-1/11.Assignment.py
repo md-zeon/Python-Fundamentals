@@ -57,6 +57,15 @@ Q5. Evaluate and print the result of the following expression:
 x = 10 + 3 * 2 ** 2 
 Based on what you learnt in the lecture explain why the output is what it is. 
 '''
+# * Q5 Solution:
+x = 10 + 3 * 2 ** 2
+print("Result:", x)
+# * Explanation:
+# The expression is evaluated based on the order of operations (PEMDAS/BODMAS):
+# 1. Parentheses: There are no parentheses to evaluate first.
+# 2. Exponents: 2 ** 2 = 4
+# 3. Multiplication: 3 * 4 = 12
+# 4. Addition: 10 + 12 = 22
 
 '''
 Q6. Write a program to swap values of two numbers entered by the user.
