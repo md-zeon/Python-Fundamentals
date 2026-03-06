@@ -139,7 +139,12 @@ Q9. Ask the user for: Principal (P), Rate (R), Time (T). Convert all to float an
 compute simple interest: 
 SI = (P * R * T )/100 
 '''
-
+# * Q9 Solution:
+principal = float(input("Enter the principal amount: "))
+rate = float(input("Enter the rate of interest: "))
+time = float(input("Enter the time period: "))
+simple_interest = (principal * rate * time) / 100
+print("Simple Interest:", simple_interest)
 
 '''
 Q10. Take a decimal number as input (like 45.78) and output its: 
