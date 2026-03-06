@@ -116,9 +116,14 @@ print("Second integer:", num2)
 '''
 Q7. Ask the user for a temperature in Celsius (string input). Convert it to float, 
 then calculate and print temperature in Fahrenheit. 
-float 
+ 
 Conversion formula: FahrenheitTemp = (CelsiusTemp * (9/5)) + 32 
 '''
+# * Q7 Solution:
+celsius_temp = input("Enter temperature in Celsius: ")
+fahrenheit_temp = (float(celsius_temp) * (9/5)) + 32
+print("Temperature in Fahrenheit:", fahrenheit_temp)
+
 
 '''
 Q8. Take the radius (r) as user input and print the area. 
