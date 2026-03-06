@@ -1,3 +1,4 @@
+from cmath import sqrt
 '''
 Note - To solve some of the assignment Qs we'll have to learn some additional 
 logic (already mentioned as hints). The purpose of these questions is to help build 
@@ -13,6 +14,8 @@ calculate the final tax rate based on these rules:
 • If salary > 70,000 → 25% 
 '''
 # * Q1 Solution:
+
+
 salary = int(input("Enter your salary: "))
 
 if salary < 30000:
@@ -131,6 +134,7 @@ print(calculator(10, 5, '+'))
 print(calculator(10, 5, '-'))
 print(calculator(10, 5, '*'))
 print(calculator(10, 5, '/'))
+
 '''
 Q9. Write a function is_prime(n) that returns True if n is a prime number and 
 False otherwise, using a loop. 
@@ -146,6 +150,18 @@ For number 7 we'll check in range (2, 6) & it won't get divided by any. So 7
 is prime & we'll return true for it. 
 ] 
 '''
+# * Q9 Solution:
+def is_prime(n):
+    if n <= 1:
+        return False
+    sqrt_n = int(sqrt(n).real) + 1
+    for i in range(2, sqrt_n):
+        if n % i == 0:
+            return False
+    return True
+
+print(is_prime(9))  # False
+print(is_prime(7))  # True
 
 '''
 Q10. Let's create a “Number Guessing Game”. Given a secret number (already decided by you),
