@@ -4,7 +4,7 @@ Q1. Write a program that asks the user for their name and age, then prints a
 sentence like: 
 Hello Shradha, you are 21 years old! 
 '''
-#* Q1 Solution:
+# * Q1 Solution:
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
 print("Hello", name + ",", "you are", age, "years old!")
@@ -14,6 +14,7 @@ print("Hello", name + ",", "you are", age, "years old!")
 Q2. Take two numbers as input from the user and print their sum, difference, 
 product, and quotient. 
 '''
+# * Q2 Solution:
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 
@@ -26,6 +27,13 @@ print("Quotient:", num1 / num2)
 Q3. Ask the user to enter two integers and one float. Convert them all to floats 
 and print their average. 
 '''
+# * Q3 Solution:
+int1 = int(input("Enter the first integer: "))
+int2 = int(input("Enter the second integer: "))
+float_num = float(input("Enter a float: "))
+
+average = (float(int1) + float(int2) + float_num) / 3
+print("The average is:", average)
 
 '''
 Q4. The user enters a string containing a number (e.g., ). Convert it to: 
