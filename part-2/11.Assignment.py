@@ -70,9 +70,17 @@ print(count_digits(312))
 
 
 ''' 
-Q6. Write a program to print all numbers from 1 to 100 that are divisible by both 3 
-and 5.
+Q6. Write a program to print all numbers from 1 to 100 that are divisible by both 3 and 5.
 '''
+# * Q6 Solution:
+
+def print_divisible_by_3_and_5():
+    for num in range(1, 101):
+        if num % 3 == 0 and num % 5 == 0:
+            print(num, end=' ')
+    print()
+
+print_divisible_by_3_and_5()
 
 '''
 Q7. Design a program to continuously input a number from user & print if it is 
