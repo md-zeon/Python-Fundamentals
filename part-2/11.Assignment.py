@@ -86,6 +86,22 @@ print_divisible_by_3_and_5()
 Q7. Design a program to continuously input a number from user & print if it is 
 positive or negative until the user enters “Quit”. 
 '''
+# * Q7 Solution:
+while True:
+    user_input = input("Enter a number (or 'Quit' to exit): ")
+    if user_input.lower() == 'quit':
+        break
+    try:
+        number = float(user_input)
+        if number > 0:
+            print("Positive")
+        elif number < 0:
+            print("Negative")
+        else:
+            print("Zero")
+    except ValueError:
+        print("Invalid input. Please enter a number or 'Quit'.")
+
 
 '''
 Q8. Let's create a Simple Calculator that performs arithmetic operations. Create 
