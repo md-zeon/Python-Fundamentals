@@ -109,7 +109,28 @@ a function calculator(a, b, operation) that performs addition, subtraction,
 multiplication, or division based on the operation parameter. 
 [ operation parameter can have values '+', '-', '*', and '/'. ]
 '''
+# * Q8 Solution:
 
+def calculator(a, b, operation):
+    match operation:
+        case '+':
+            return a + b
+        case '-':
+            return a - b
+        case '*':
+            return a * b
+        case '/':
+            if b != 0:
+                return a / b
+            else:
+                return "Error: Division by zero"
+        case _:
+            return "Invalid operation"
+
+print(calculator(10, 5, '+'))
+print(calculator(10, 5, '-'))
+print(calculator(10, 5, '*'))
+print(calculator(10, 5, '/'))
 '''
 Q9. Write a function is_prime(n) that returns True if n is a prime number and 
 False otherwise, using a loop. 
