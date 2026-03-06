@@ -28,6 +28,14 @@ print(f"Your tax rate is: {tax_rate * 100}%")
 Q2. Write a function that takes two integers and and prints all even 
 numbers between them (inclusive). 
 '''
+# * Q2 Solution:
+def print_even_numbers(start, end):
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            print(num, end=' ')
+    print()
+
+print_even_numbers(1, 10)
 
 '''
 Q3. Write a function that prints the digits of a number, n. 
