@@ -39,20 +39,35 @@ print_even_numbers(1, 10)
 
 '''
 Q3. Write a function that prints the digits of a number, n. 
-For eg: , there are 3 digits in it 3, 1 and 2 & we need to print them. 
+For eg: n = 312, there are 3 digits in it 3, 1 and 2 & we need to print them. 
  
  
 [Hint - The right most digit of a number N is N%10. 
 And to remove the right most digit from a number, we can do N = N / 10.] 
 '''
+# * Q3 Solution:
+def print_digits(n):
+    while n > 0:
+        digit = n % 10
+        print(digit, end=' ')
+        n = n // 10
+    print()
+
+print_digits(312)
 
 '''
 Q4. Write a function to return the count the number of digits in a number, n.
 '''
+# * Q4 Solution:
+def count_digits(n):
+    count = 0
+    while n > 0:
+        n = n // 10
+        count += 1
+    return count
 
-''' 
-Q5. Write a function to return the sum of digits of a number, n. 
-'''
+print(count_digits(312))
+
 
 ''' 
 Q6. Write a program to print all numbers from 1 to 100 that are divisible by both 3 
