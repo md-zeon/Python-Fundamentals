@@ -170,3 +170,14 @@ write a program that asks the user to guess it and prints:
     • "Too low"  if the guess is below 
     • "Correct!" if the guess matches
 '''
+# * Q10 Solution:
+secret_number = 23
+while True:
+    guess = int(input("Guess the secret number: "))
+    if guess > secret_number:
+        print("Too high")
+    elif guess < secret_number:
+        print("Too low")
+    else:
+        print("Correct!")
+        break
