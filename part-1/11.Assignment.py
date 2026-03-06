@@ -36,12 +36,21 @@ average = (float(int1) + float(int2) + float_num) / 3
 print("The average is:", average)
 
 '''
-Q4. The user enters a string containing a number (e.g., ). Convert it to: 
+Q4. The user enters a string containing a number (e.g., "45"). Convert it to: 
 • an integer 
 • a float 
 • a string again 
 Print all three values with their types.
 '''
+# * Q4 Solution:
+num = input("Enter a number: ")
+num = int(num)  # Convert to integer
+print("Integer:", num, "Type:", type(num))
+num = float(num)  # Convert to float
+print("Float:", num, "Type:", type(num))
+num = str(num)  # Convert back to string
+print("String:", num, "Type:", type(num))
+
 
 '''
 Q5. Evaluate and print the result of the following expression: 
