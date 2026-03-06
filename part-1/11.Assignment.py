@@ -129,6 +129,10 @@ print("Temperature in Fahrenheit:", fahrenheit_temp)
 Q8. Take the radius (r) as user input and print the area. 
 Use the formula:  Area = π * r2   (value of π = 3.14) 
 '''
+# * Q8 Solution:
+radius = input("Enter the radius: ")
+area = 3.14 * (float(radius) ** 2)
+print("Area of the circle:", area)
 
 '''
 Q9. Ask the user for: Principal (P), Rate (R), Time (T). Convert all to float and 
