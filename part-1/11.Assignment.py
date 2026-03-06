@@ -70,7 +70,49 @@ print("Result:", x)
 '''
 Q6. Write a program to swap values of two numbers entered by the user.
 '''
+# * Q6 Solution:
+num1 = input("Enter the first number: ")
+num2 = input("Enter the second number: ")
+# * Swapping the values (using a temporary variable)
+temp = num1
+num1 = num2
+num2 = temp
+print("After swapping:")
+print("First number:", num1)
+print("Second number:", num2)
 
+# * Alternative swapping without a temporary variable:
+num1 = input("Enter the first number: ")
+num2 = input("Enter the second number: ")
+num1, num2 = num2, num1  # Swapping using tuple unpacking
+print("After swapping:")
+print("First number:", num1)
+print("Second number:", num2)
+
+# * Alternative swapping using arithmetic operations (only works for numbers):
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num1 = num1 + num2  # Step 1: num1 now holds the sum of num1 and num2
+num2 = num1 - num2  # Step 2: num2 now holds the original value of num1
+num1 = num1 - num2  # Step 3: num1 now holds the original value of num2
+print("After swapping:")
+print("First number:", num1)
+print("Second number:", num2)
+
+# ! Note: The arithmetic swapping method can lead to issues with floating-point precision and is not recommended for large numbers or non-numeric inputs.
+
+# * Alternative swapping using XOR (only works for integers):
+num1 = int(input("Enter the first integer: "))
+num2 = int(input("Enter the second integer: "))
+num1 = num1 ^ num2  # Step 1: num1 now holds the result of num1 XOR num2
+num2 = num1 ^ num2  # Step 2: num2 now holds the original value of num1
+num1 = num1 ^ num2  # Step 3: num1 now holds the original value of num2
+print("After swapping:")
+print("First integer:", num1)
+print("Second integer:", num2)
+
+
+# ! Note: The XOR swapping method is a bitwise operation and can be less intuitive than using a temporary variable or tuple unpacking. It also only works for integers.
 '''
 Q7. Ask the user for a temperature in Celsius (string input). Convert it to float, 
 then calculate and print temperature in Fahrenheit. 
