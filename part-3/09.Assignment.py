@@ -6,6 +6,51 @@ A palindrome is a string which is same when we read it forward & backward. Eg -
 [ Hint- A palindrome string is equal to the reversed version of the string. We can 
 use a loop to reverse the string manually. ]
 '''
+# * Q1 Solution:
+# Method 1: Using a loop to reverse the string manually
+string = input("Enter a string: ")
+reversed_string = "";
+
+for c in string:
+    reversed_string = c + reversed_string;
+
+if (string == reversed_string):
+    print("Given String is a palindrome");
+else:
+    print("Given String is not a palindrome");
+
+# Method 2: Using slicing to reverse the string
+string = input("Enter a string: ")
+reversed_string = string[::-1];
+if (string == reversed_string):
+    print("Given String is a palindrome");
+else:
+    print("Given String is not a palindrome");
+
+# Method 3: Using two pointers to compare characters from both ends of the string
+string = input("Enter a string: ")
+i = 0;
+j = len(string) - 1;
+is_palindrome = True;
+while (i < j):
+    if (string[i] != string[j]):
+        is_palindrome = False;
+        break;
+    i += 1;
+    j -= 1;
+
+if (is_palindrome):
+    print("Given String is a palindrome");
+else:
+    print("Given String is not a palindrome");
+
+# Method 4: Using built-in function reversed() to reverse the string
+string = input("Enter a string: ")
+reversed_string = ''.join(reversed(string));
+if (string == reversed_string):
+    print("Given String is a palindrome");
+else:
+    print("Given String is not a palindrome");
 
 
 '''
