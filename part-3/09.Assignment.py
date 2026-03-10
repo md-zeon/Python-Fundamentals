@@ -7,50 +7,51 @@ A palindrome is a string which is same when we read it forward & backward. Eg -
 use a loop to reverse the string manually. ]
 '''
 # * Q1 Solution:
-# Method 1: Using a loop to reverse the string manually
-string = input("Enter a string: ")
-reversed_string = "";
+def answer_q1():
+    # Method 1: Using a loop to reverse the string manually
+    string = input("Enter a string: ")
+    reversed_string = "";
 
-for c in string:
-    reversed_string = c + reversed_string;
+    for c in string:
+        reversed_string = c + reversed_string;
 
-if (string == reversed_string):
-    print("Given String is a palindrome");
-else:
-    print("Given String is not a palindrome");
+    if (string == reversed_string):
+        print("Given String is a palindrome");
+    else:
+        print("Given String is not a palindrome");
 
-# Method 2: Using slicing to reverse the string
-string = input("Enter a string: ")
-reversed_string = string[::-1];
-if (string == reversed_string):
-    print("Given String is a palindrome");
-else:
-    print("Given String is not a palindrome");
+    # Method 2: Using slicing to reverse the string
+    string = input("Enter a string: ")
+    reversed_string = string[::-1];
+    if (string == reversed_string):
+        print("Given String is a palindrome");
+    else:
+        print("Given String is not a palindrome");
 
-# Method 3: Using two pointers to compare characters from both ends of the string
-string = input("Enter a string: ")
-i = 0;
-j = len(string) - 1;
-is_palindrome = True;
-while (i < j):
-    if (string[i] != string[j]):
-        is_palindrome = False;
-        break;
-    i += 1;
-    j -= 1;
+    # Method 3: Using two pointers to compare characters from both ends of the string
+    string = input("Enter a string: ")
+    i = 0;
+    j = len(string) - 1;
+    is_palindrome = True;
+    while (i < j):
+        if (string[i] != string[j]):
+            is_palindrome = False;
+            break;
+        i += 1;
+        j -= 1;
 
-if (is_palindrome):
-    print("Given String is a palindrome");
-else:
-    print("Given String is not a palindrome");
+    if (is_palindrome):
+        print("Given String is a palindrome");
+    else:
+        print("Given String is not a palindrome");
 
-# Method 4: Using built-in function reversed() to reverse the string
-string = input("Enter a string: ")
-reversed_string = ''.join(reversed(string));
-if (string == reversed_string):
-    print("Given String is a palindrome");
-else:
-    print("Given String is not a palindrome");
+    # Method 4: Using built-in function reversed() to reverse the string
+    string = input("Enter a string: ")
+    reversed_string = ''.join(reversed(string));
+    if (string == reversed_string):
+        print("Given String is a palindrome");
+    else:
+        print("Given String is not a palindrome");
 
 
 '''
@@ -58,10 +59,11 @@ Q2. Given a list of integers compute the average of all numbers in the list.
 '''
 
 # * Q2 Solution:
-numbers = [1, 2, 3, 4, 5]
-average = sum(numbers) / len(numbers)
+def answer_q2():
+    numbers = [1, 2, 3, 4, 5]
+    average = sum(numbers) / len(numbers)
 
-print("Average:", average)
+    print("Average:", average)
 
 '''
 Q3. Input two lists of integers from the user. Merge them into one list and sort the 
@@ -70,30 +72,32 @@ Eg -  list1 = [1, 2, 7],
 list2 = [3, 4, 5]
 result = [1, 2, 3, 4, 5, 7]
 '''
+
 # * Q3 Solution:
-# Method 1: Using the + operator to merge and sort() method to sort the list
-list1 = list(map(int, input("Enter the first list of integers (space-separated): ").split()))
-list2 = list(map(int, input("Enter the second list of integers (space-separated): ").split()))
-merged_list = list1 + list2
-merged_list.sort()
+def answer_q3():
+    # Method 1: Using the + operator to merge and sort() method to sort the list
+    list1 = list(map(int, input("Enter the first list of integers (space-separated): ").split()))
+    list2 = list(map(int, input("Enter the second list of integers (space-separated): ").split()))
+    merged_list = list1 + list2
+    merged_list.sort()
 
-# Method 2: using input() and a loop to take input for both lists, then merging and sorting
-list1 = []
-list2 = []
-n1 = int(input("Enter the number of elements in the first list: "))
-for i in range(n1):
-    num = int(input(f"Enter element {i+1} for the first list: "))
-    list1.append(num)
+    # Method 2: using input() and a loop to take input for both lists, then merging and sorting
+    list1 = []
+    list2 = []
+    n1 = int(input("Enter the number of elements in the first list: "))
+    for i in range(n1):
+        num = int(input(f"Enter element {i+1} for the first list: "))
+        list1.append(num)
 
-n2 = int(input("Enter the number of elements in the second list: "))
-for i in range(n2):
-    num = int(input(f"Enter element {i+1} for the second list: "))
-    list2.append(num)
+    n2 = int(input("Enter the number of elements in the second list: "))
+    for i in range(n2):
+        num = int(input(f"Enter element {i+1} for the second list: "))
+        list2.append(num)
 
-merged_list = list1 + list2
-merged_list.sort()
+    merged_list = list1 + list2
+    merged_list.sort()
 
-print("Merged and sorted list:", merged_list);
+    print("Merged and sorted list:", merged_list);
 
 '''
 Q4. Given a tuple of integers, create:
@@ -101,18 +105,20 @@ Q4. Given a tuple of integers, create:
 • A tuple of all odd numbers
 '''
 # * Q4 Solution:
-numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-even_numbers = ()
-odd_numbers = ()
-for num in numbers:
-    if (num % 2 == 0):
-        even_numbers += (num,);
-    else:
-        odd_numbers += (num,);
+def answer_q4():
+    numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    even_numbers = ()
+    odd_numbers = ()
+    for num in numbers:
+        if (num % 2 == 0):
+            even_numbers += (num,);
+        else:
+            odd_numbers += (num,);
 
-print("Even numbers:", even_numbers);
-print("Odd numbers:", odd_numbers);
+    print("Even numbers:", even_numbers);
+    print("Odd numbers:", odd_numbers);
 
+answer_q4();
 
 '''
 Q5. Create a dictionary where:
