@@ -71,8 +71,25 @@ list2 = [3, 4, 5]
 result = [1, 2, 3, 4, 5, 7]
 '''
 # * Q3 Solution:
+# Method 1: Using the + operator to merge and sort() method to sort the list
 list1 = list(map(int, input("Enter the first list of integers (space-separated): ").split()))
 list2 = list(map(int, input("Enter the second list of integers (space-separated): ").split()))
+merged_list = list1 + list2
+merged_list.sort()
+
+# Method 2: using input() and a loop to take input for both lists, then merging and sorting
+list1 = []
+list2 = []
+n1 = int(input("Enter the number of elements in the first list: "))
+for i in range(n1):
+    num = int(input(f"Enter element {i+1} for the first list: "))
+    list1.append(num)
+
+n2 = int(input("Enter the number of elements in the second list: "))
+for i in range(n2):
+    num = int(input(f"Enter element {i+1} for the second list: "))
+    list2.append(num)
+
 merged_list = list1 + list2
 merged_list.sort()
 
