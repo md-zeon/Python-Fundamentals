@@ -190,6 +190,15 @@ Create a dictionary that maps each word to its length.
 Example:
 {"apple": 5, "banana": 6, "kiwi": 4, ...}
 '''
+# * Q6 Solution:
+def answer_q6():
+    words = ["apple", "banana", "kiwi", "cherry", "mango"]
+    word_length_dict = {}
+    for word in words:
+        word_length_dict[word] = len(word)
+    print(word_length_dict)
+
+answer_q6()
 
 '''
 Q7. Write a program that takes a string from the user and prints the number of 
