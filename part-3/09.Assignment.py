@@ -118,7 +118,7 @@ def answer_q4():
     print("Even numbers:", even_numbers);
     print("Odd numbers:", odd_numbers);
 
-answer_q4();
+# answer_q4();
 
 '''
 Q5. Create a dictionary where:
@@ -198,12 +198,19 @@ def answer_q6():
         word_length_dict[word] = len(word)
     print(word_length_dict)
 
-answer_q6()
+# answer_q6()
 
 '''
 Q7. Write a program that takes a string from the user and prints the number of 
 spaces in the string.
 '''
+# * Q7 Solution:
+def answer_q7():
+    string = input("Enter a string: ")
+    space_count = string.count(' ')
+    print(f"Number of spaces in the string: {space_count}")
+
+answer_q7()
 
 '''
 Q8. Write a program to check whether two lists share no common elements. 
