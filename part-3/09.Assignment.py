@@ -57,6 +57,12 @@ else:
 Q2. Given a list of integers compute the average of all numbers in the list.
 '''
 
+# * Q2 Solution:
+numbers = [1, 2, 3, 4, 5]
+average = sum(numbers) / len(numbers)
+
+print("Average:", average)
+
 '''
 Q3. Input two lists of integers from the user. Merge them into one list and sort the 
 result.
