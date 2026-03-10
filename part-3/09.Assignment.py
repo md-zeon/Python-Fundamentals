@@ -250,10 +250,20 @@ def answer_q9():
 
     print("Elements that appear more than once:", duplicates);
 
-answer_q9()
+# answer_q9()
 
 '''
 Q10. Ask the user for a string and print:
 • All unique characters
 • The count of unique characters
 '''
+# * Q10 Solution:
+def answer_q10():
+    string = input("Enter a string: ")
+    unique_characters = set(string)
+    count_unique_characters = len(unique_characters)
+
+    print("Unique characters:", unique_characters)
+    print("Count of unique characters:", count_unique_characters)
+
+answer_q10()
