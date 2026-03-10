@@ -77,6 +77,7 @@ result = [1, 2, 3, 4, 5, 7]
 def answer_q3():
     # Method 1: Using the + operator to merge and sort() method to sort the list
     list1 = list(map(int, input("Enter the first list of integers (space-separated): ").split()))
+    # Explanation: The map() function applies the given function (in this case, int) to each item of the iterable (in this case, the list of strings obtained from input().split()). The result is a map object, which is then converted to a list using the list() function.
     list2 = list(map(int, input("Enter the second list of integers (space-separated): ").split()))
     merged_list = list1 + list2
     merged_list.sort()
@@ -210,13 +211,27 @@ def answer_q7():
     space_count = string.count(' ')
     print(f"Number of spaces in the string: {space_count}")
 
-answer_q7()
+# answer_q7()
 
 '''
 Q8. Write a program to check whether two lists share no common elements. 
 # share no common elements list1 = [1, 2, 3, 4] list2 = [5, 6, 7, 8]
 # share common elements list1 = [1, 2, 3] list2 = [3, 4]
 '''
+# * Q8 Solution:
+def answer_q8():
+    list1 = [1, 2, 3, 4]
+    list2 = [5, 6, 7, 8]
+
+    set1 = set(list1)
+    set2 = set(list2)
+
+    if (set1.isdisjoint(set2)):
+        print("The two lists share no common elements.");
+    else:
+        print("The two lists share common elements.");
+
+answer_q8()
 
 '''
 Q9. Given a list, print all elements that appear more than once in the list.
