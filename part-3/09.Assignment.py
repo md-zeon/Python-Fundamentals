@@ -67,9 +67,16 @@ print("Average:", average)
 Q3. Input two lists of integers from the user. Merge them into one list and sort the 
 result.
 Eg -  list1 = [1, 2, 7],  
-list2 = [2, 4, 5]
-result = [1, 2, 3, 54, 5, 7]
+list2 = [3, 4, 5]
+result = [1, 2, 3, 4, 5, 7]
 '''
+# * Q3 Solution:
+list1 = list(map(int, input("Enter the first list of integers (space-separated): ").split()))
+list2 = list(map(int, input("Enter the second list of integers (space-separated): ").split()))
+merged_list = list1 + list2
+merged_list.sort()
+
+print("Merged and sorted list:", merged_list);
 
 '''
 Q4. Given a tuple of integers, create:
