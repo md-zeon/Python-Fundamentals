@@ -231,11 +231,26 @@ def answer_q8():
     else:
         print("The two lists share common elements.");
 
-answer_q8()
+# answer_q8()
 
 '''
 Q9. Given a list, print all elements that appear more than once in the list.
 '''
+# * Q9 Solution:
+def answer_q9():
+    numbers = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 9, 1]
+    seen = set()
+    duplicates = set()
+
+    for num in numbers:
+        if (num in seen):
+            duplicates.add(num);
+        else:
+            seen.add(num);
+
+    print("Elements that appear more than once:", duplicates);
+
+answer_q9()
 
 '''
 Q10. Ask the user for a string and print:
