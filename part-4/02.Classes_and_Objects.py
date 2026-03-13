@@ -81,3 +81,5 @@ print(f"Student Grade: {student2.get_grade()}")
 student2.study()
 student2.take_exam()
 
+print(student1) # <__main__.Student object at 0x000001F5870786E0>
+print(student2) # <__main__.Student object at 0x000001F58707C550>
