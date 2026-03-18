@@ -254,6 +254,21 @@ Q8. Create a class Player with:
     • instance variables name and level 
 Track how many players were created. 
 '''
+# Q8 Solution:
+class Player:
+    player_count = 0;
+
+    def __init__(self, name, level):
+        self.name = name;
+        self.level = level;
+        Player.player_count += 1;
+
+print("Total Players Created:", Player.player_count);
+p1 = Player("Alice", 5);
+p2 = Player("Bob", 10);
+print("Total Players Created:", Player.player_count);
+p3 = Player("Charlie", 15);
+print("Total Players Created:", Player.player_count);
 
 '''
 Q9. Create the following classes: Herbivore , Carnivore , Omnivore
