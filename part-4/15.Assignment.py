@@ -48,6 +48,32 @@ And add methods to:
     • count reviews 
     • display all reviews 
 '''
+# Q2 Solution:
+class Book:
+    def __init__(self, title, author):
+        self.title = title;
+        self.author = author;
+        self.reviews = [];
+
+    def add_review(self, review):
+        self.reviews.append(review);
+        print("Review added:", review);
+
+    def count_reviews(self):
+        print("Total reviews:", len(self.reviews));
+        return len(self.reviews);
+
+    def display_reviews(self):
+        print("Reviews for", self.title, "by", self.author);
+        for review in self.reviews:
+            print("-", review);
+
+b1 = Book("The Great Gatsby", "F. Scott Fitzgerald");
+b1.add_review("A classic novel.");
+b1.add_review("Great character development.");
+b1.count_reviews();
+b1.display_reviews();
+
 
 '''
 Q3. Create a class Student
