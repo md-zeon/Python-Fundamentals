@@ -3,6 +3,39 @@ Q1. Create a BankAccount class
 with attributes account_number, owner_name, and balance.
 Add methods to deposit, withdraw, and check balance. 
 '''
+# Q1 Solution:
+class BankAccount:
+    def __init__(self, account_number, owner_name, balance):
+        self.account_number = account_number;
+        self.owner_name = owner_name;
+        self.balance = balance;
+
+    def deposit(self, amount):
+        if (amount >= 0):
+            self.balance += amount
+            print("Deposit amount:", amount, "New Balance:", self.balance)
+        else:
+            print("Deposit amount cannot be negative");
+
+    def withdraw(self, amount):
+        if (amount >= 0):
+            if (self.balance >= amount):
+                self.balance -= amount
+                print("Withdraw amount:", amount, "New Balance:", self.balance)
+            else:
+                print("You don't have enough balance.")
+        else:
+            print("Withdraw amount cannot be negative");
+
+    def check_balance(self):
+        print("Current balance:", self.balance)
+        return self.balance;
+
+a1 = BankAccount("7323254823", "Zeanur Rahaman Zeon", 30200);
+a1.check_balance();
+a1.deposit(200)
+a1.withdraw(200)
+a1.check_balance();
 
 
 '''
