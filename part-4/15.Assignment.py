@@ -275,6 +275,24 @@ Q9. Create the following classes: Herbivore , Carnivore , Omnivore
 with some attributes & methods. Then create a class Bear that inherits from all the above 
 classes to showcase how multiple inheritance works. 
 '''
+# Q9 Solution:
+class Herbivore:
+    def eat_plants(self):
+        print("Eating plants...");
+class Carnivore:
+    def eat_meat(self):
+        print("Eating meat...");
+class Omnivore:
+    def eat_both(self):
+        print("Eating both plants and meat...");
+class Bear(Herbivore, Carnivore, Omnivore):
+    def __init__(self, name):
+        self.name = name;
+bear1 = Bear("Baloo");
+print("Bear Name:", bear1.name);
+bear1.eat_plants();
+bear1.eat_meat();
+bear1.eat_both();
 
 '''
 Q10. Mini Project - OOP Chat System 
