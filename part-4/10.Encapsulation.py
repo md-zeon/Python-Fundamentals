@@ -34,16 +34,18 @@ class BankAccount:
         return self._balance
 
     def get_account_number(self):
-        return self._account_number
+        return self.__account_number
 # Example usage
 account = BankAccount("Alice", 1000, "123456789")
 account.deposit(500)  # Deposited 500. New balance: 1500
 account.withdraw(200)  # Withdrew 200. New balance: 1300
 print(account.get_balance())  # 1300
 print(account.get_account_number())  # 123456789
-# Attempting to access protected attributes directly will result in an error
-# print(account._balance)  # AttributeError: 'BankAccount' object has no attribute '_balance'
-# However, you can access protected attributes using name mangling
+# Attempting to access private attributes directly will result in an error
+# print(account.__account_number)  # AttributeError: 'BankAccount' object has no attribute '__account_number'
+# However, you can access private attributes using name mangling
+# object._ClassName__private_attribute
 print(account._BankAccount__account_number)  # 123456789
-print(account._balance)  # 1300
 # protected attributes can be accessed but are intended to be used within the class and its subclasses
+# It's generally not recommended to access protected attributes directly from outside the class, but it is possible in Python.
+print(account._balance)  # 1300
