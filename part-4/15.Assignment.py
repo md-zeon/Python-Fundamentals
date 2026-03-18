@@ -305,3 +305,44 @@ And we have to implement functions:
     • viewing chat history 
     • user joining and leaving the chatroom
 '''
+# Q10 Solution:
+class User:
+    def __init__(self, username):
+        self.username = username;
+class Message:
+    def __init__(self, sender, content):
+        self.sender = sender;
+        self.content = content;
+class ChatRoom:
+    def __init__(self, name):
+        self.name = name;
+        self.users = [];
+        self.messages = [];
+    def join(self, user):
+        self.users.append(user);
+        print(user.username, "joined the chat room:", self.name);
+    def leave(self, user):
+        self.users.remove(user);
+        print(user.username, "left the chat room:", self.name);
+    def send_message(self, sender, content):
+        if sender in self.users:
+            message = Message(sender, content);
+            self.messages.append(message);
+            print(sender.username, "sent a message:", content);
+        else:
+            print(sender.username, "is not in the chat room.");
+    def view_chat_history(self):
+        print("Chat History for", self.name);
+        for message in self.messages:
+            print(message.sender.username + ":", message.content);
+
+# Example Usage:
+chat_room = ChatRoom("General");
+user1 = User("Alice");
+user2 = User("Bob");
+chat_room.join(user1);
+chat_room.join(user2);
+chat_room.send_message(user1, "Hello everyone!");
+chat_room.send_message(user2, "Hi Alice!");
+chat_room.view_chat_history();
+chat_room.leave(user1);
