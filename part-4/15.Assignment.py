@@ -235,6 +235,18 @@ Q7. Create a class Person that allows the constructor to work with:
 As direct constructor overloading (multiple constructors) are not allowed but 
 we have to use default parameters to simulate constructor overloading. 
 '''
+# Q7 Solution:
+class Person:
+    def __init__(self, name, age=None, address=None):
+        self.name = name;
+        self.age = age;
+        self.address = address;
+p1 = Person("Alice");
+p2 = Person("Bob", 30);
+p3 = Person("Charlie", 25, "123 Main St");
+print("Person 1:", p1.name, p1.age, p1.address);
+print("Person 2:", p2.name, p2.age, p2.address);
+print("Person 3:", p3.name, p3.age, p3.address);
 
 '''
 Q8. Create a class Player with:  
